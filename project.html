@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChiaroPixel — Blender Add-on by Iman Mostalipour</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="index.html">Iman Mostalipour<b>.</b></a>
+  <nav>
+    <a href="index.html">Home</a><a href="portfolio.html">Portfolio</a><a href="project.html" class="on">ChiaroPixel</a><a href="cv.html">CV</a><a href="index.html#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="kicker" style="margin-top:36px">Blender Add-on · Python · GPL-3.0</div>
+  <h1 style="font-size:38px">ChiaroPixel</h1>
+  <p class="lede" style="max-width:760px">A studio-grade <b>3D-to-pixel-art baker for Blender (4.2–5.2 LTS)</b> with camera-space normal maps, perceptual OKLab palettes and drop-in <b>Godot 4</b> resources. Pure Python + NumPy — zero external wheels.</p>
+
+  <img class="wide" src="assets/showcase_passes.png" alt="ChiaroPixel bake passes: albedo, normals, specular, emission and dynamic relighting">
+
+  <h2>What it does</h2>
+  <div class="panel">
+    <p>ChiaroPixel turns 3D characters, animated rigs and environment props into crisp, hand-crafted 2D pixel-art sprite sheets, paired with pixel-accurate <b>camera-space normal maps</b>, <b>specular/gloss masks</b>, <b>emission glow masks</b>, <b>JSON atlases</b> and ready-to-use Godot 4 <code>.tres</code> resources (CanvasTexture + pre-sliced SpriteFrames).</p>
+    <p>Rooted in studio photography and darkroom tonal control (<i>chiaroscuro</i>), it combines EV-calibrated three-point lighting ratios, perceptual OKLab colour quantisation and temporally locked Bayer dithering — so 2D sprites react dynamically to torches, lanterns, rim light and moonlight without colour muddying or animation flicker.</p>
+  </div>
+
+  <h2>From my own character, end to end</h2>
+  <img class="wide" src="assets/bot-sprites.png" alt="Robot character baked into a sprite sheet" style="background:#000">
+  <div class="panel"><p>The robot character above was designed and modeled by me in 3D, then baked with ChiaroPixel into a multi-direction sprite sheet — the full pipeline from character design to a game-ready asset, built and tested on my own work.</p></div>
+
+  <h2>Multi-direction turnaround</h2>
+  <img class="wide" src="assets/showcase_turnaround.png" alt="Four-direction turnaround with camera-space normals">
+  <div class="panel"><p>Every turnaround angle (1 / 2 / 4 / 8 directions) transforms shaded surface and bump normals into active camera space, so dynamic 2D point lights illuminate every facing direction consistently.</p></div>
+
+  <h2>Perceptual palettes</h2>
+  <img class="wide" src="assets/showcase_palettes.png" alt="Built-in OKLab palette presets">
+  <div class="panel"><p>Six built-in OKLab palette presets (Lantern Noir 16, Darkroom Silver 8, Cinder Forge 12, Verdant Relic 16, Classic DMG 4, Arcade 16), adaptive cross-frame palette extraction, and custom <code>.hex</code> / <code>.gpl</code> / <code>.pal</code> import — plus an automatic six-panel 2D relight verification strip for every bake.</p></div>
+
+  <h2>Why I built it</h2>
+  <div class="panel">
+    <p>My pixel-art workflow kept hitting the same wall: hand-drawing every angle and lighting state of a character does not scale, and naive 3D renders look muddy at sprite size. ChiaroPixel is my answer — a production tool that treats a sprite bake like a photography shoot: controlled light, perceptual colour, and materials (normals, specular, emission) that let a 2D sprite live under dynamic game lighting. Building it taught me Python tooling, colour science and pipeline design — the same mix of art and engineering I want to study formally.</p>
+    <p>💻 Source: <a href="https://github.com/hakhaam-m">github.com/hakhaam-m</a> (GPL-3.0-or-later)</p>
+  </div>
+</main>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;width:100%">
+  <span>© Iman Mostalipour (Ahura)</span><span><a href="portfolio.html">← Back to portfolio</a></span>
+</div></footer>
+</body>
+</html>
